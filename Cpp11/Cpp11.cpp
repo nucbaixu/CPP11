@@ -1,20 +1,53 @@
-﻿// Cpp11.cpp : 此文件包含 "main" 函数。程序执行将在此处开始并结束。
+﻿#include <iostream>
+//void fun(auto x = 1) {}  // 1: auto函数参数，无法通过编译
 //
+//struct str {
+//	auto var = 10;   // 2: auto非静态成员变量，无法通过编译
+//};
 
-#include <iostream>
+
+int arr[5] = { 0 };
+int *ptr = arr;
+
+struct S { double d; } s;
+
+void Overloaded(int);
+void Overloaded(char);      // 重载的函数
+
+int && RvalRef();
+
+const bool Func(int);
 
 int main()
 {
+	char x[3];
+	auto y = x;
+	//auto z[3] = x; // 3: auto数组，无法通过编译
+
+	// 4: auto模板参数（实例化时），无法通过编译
+	//vector<auto> x = { 1 };
+
+
+	// 规则1: 单个标记符表达式以及访问类成员，推导为本类型
+	decltype(arr) var1;            // int[5], 标记符表达式
+	decltype(ptr) var2;            // int*, 标记符表达式
+	decltype(s.d) var4;            // double, 成员访问表达式
+	//decltype(Overloaded) var5;     // 无法通过编译，是个重载的函数
+
+	// 规则2: 将亡值，推导为类型的右值引用
+	decltype(RvalRef()) var6 = 1;  // int&&
+
+	// 规则3: 左值，推导为类型的引用
+	decltype(true ? i : i) var7 = i;    // int&, 三元运算符，这里返回一个i的左值
+	decltype((i)) var8 = i;             // int&, 带圆括号的左值 
+	decltype(++i) var9 = i;             // int&, ++i返回i的左值
+	decltype(arr[3]) var10 = i;         // int& []操作返回左值
+	decltype(*ptr)  var11 = i;          // int& *操作返回左值
+	decltype("lval") var12 = "lval";    // const char(&)[9], 字符串字面常量为左值
+
+	// 规则4：以上都不是，推导为本类型
+	decltype(1) var13;              // int, 除字符串外字面常量为右值
+	decltype(i++) var14;            // int, i++返回右值
+	decltype((Func(1))) var15;      // const bool, 圆括号可以忽略
     std::cout << "Hello World!\n";
 }
-
-// 运行程序: Ctrl + F5 或调试 >“开始执行(不调试)”菜单
-// 调试程序: F5 或调试 >“开始调试”菜单
-
-// 入门使用技巧: 
-//   1. 使用解决方案资源管理器窗口添加/管理文件
-//   2. 使用团队资源管理器窗口连接到源代码管理
-//   3. 使用输出窗口查看生成输出和其他消息
-//   4. 使用错误列表窗口查看错误
-//   5. 转到“项目”>“添加新项”以创建新的代码文件，或转到“项目”>“添加现有项”以将现有代码文件添加到项目
-//   6. 将来，若要再次打开此项目，请转到“文件”>“打开”>“项目”并选择 .sln 文件
