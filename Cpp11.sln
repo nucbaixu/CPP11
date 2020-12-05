@@ -17,6 +17,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ExplicitConversionOperator"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "POD", "POD\POD.vcxproj", "{FFCC80B6-F8F3-406A-9B25-ECBDAFA0AA21}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Union", "Union\Union.vcxproj", "{ED30603F-3035-4661-B682-BAF8D02BBAD5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -81,6 +83,14 @@ Global
 		{FFCC80B6-F8F3-406A-9B25-ECBDAFA0AA21}.Release|x64.Build.0 = Release|x64
 		{FFCC80B6-F8F3-406A-9B25-ECBDAFA0AA21}.Release|x86.ActiveCfg = Release|Win32
 		{FFCC80B6-F8F3-406A-9B25-ECBDAFA0AA21}.Release|x86.Build.0 = Release|Win32
+		{ED30603F-3035-4661-B682-BAF8D02BBAD5}.Debug|x64.ActiveCfg = Debug|x64
+		{ED30603F-3035-4661-B682-BAF8D02BBAD5}.Debug|x64.Build.0 = Debug|x64
+		{ED30603F-3035-4661-B682-BAF8D02BBAD5}.Debug|x86.ActiveCfg = Debug|Win32
+		{ED30603F-3035-4661-B682-BAF8D02BBAD5}.Debug|x86.Build.0 = Debug|Win32
+		{ED30603F-3035-4661-B682-BAF8D02BBAD5}.Release|x64.ActiveCfg = Release|x64
+		{ED30603F-3035-4661-B682-BAF8D02BBAD5}.Release|x64.Build.0 = Release|x64
+		{ED30603F-3035-4661-B682-BAF8D02BBAD5}.Release|x86.ActiveCfg = Release|Win32
+		{ED30603F-3035-4661-B682-BAF8D02BBAD5}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
