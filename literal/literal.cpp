@@ -87,6 +87,7 @@ string operator"" __rs(char const* s)
 }
 
 
+
 int main()
 {
 	RGBA col1(255, 240, 155);
