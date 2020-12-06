@@ -39,6 +39,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ChangeLenTemplate", "Change
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Lambda", "Lambda\Lambda.vcxproj", "{4491862C-2E78-49D3-AA36-5992385FE2DA}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "atomic", "atomic\atomic.vcxproj", "{B1975428-6BE9-4EB3-934B-E2DBAD7BE5E9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -191,6 +193,14 @@ Global
 		{4491862C-2E78-49D3-AA36-5992385FE2DA}.Release|x64.Build.0 = Release|x64
 		{4491862C-2E78-49D3-AA36-5992385FE2DA}.Release|x86.ActiveCfg = Release|Win32
 		{4491862C-2E78-49D3-AA36-5992385FE2DA}.Release|x86.Build.0 = Release|Win32
+		{B1975428-6BE9-4EB3-934B-E2DBAD7BE5E9}.Debug|x64.ActiveCfg = Debug|x64
+		{B1975428-6BE9-4EB3-934B-E2DBAD7BE5E9}.Debug|x64.Build.0 = Debug|x64
+		{B1975428-6BE9-4EB3-934B-E2DBAD7BE5E9}.Debug|x86.ActiveCfg = Debug|Win32
+		{B1975428-6BE9-4EB3-934B-E2DBAD7BE5E9}.Debug|x86.Build.0 = Debug|Win32
+		{B1975428-6BE9-4EB3-934B-E2DBAD7BE5E9}.Release|x64.ActiveCfg = Release|x64
+		{B1975428-6BE9-4EB3-934B-E2DBAD7BE5E9}.Release|x64.Build.0 = Release|x64
+		{B1975428-6BE9-4EB3-934B-E2DBAD7BE5E9}.Release|x86.ActiveCfg = Release|Win32
+		{B1975428-6BE9-4EB3-934B-E2DBAD7BE5E9}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
